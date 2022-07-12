@@ -1,0 +1,12 @@
+https://api.openweathermap.org/data/2.5/weather?lat=52.52&lon=13.40&appid=a8b6d11e8092451401085374323733cd
+
+      URLConnection connection = new URL("https://api.openweathermap.org/data/2.5/weather?lat=52.52&lon=13.40&appid=a8b6d11e8092451401085374323733cd").openConnection();
+        String header1 = "";
+        connection.setRequestProperty("header1", header1);
+        String header2 = "";
+        connection.setRequestProperty("header2", header2);
+        //Get Response  
+        InputStream is = connection.getInputStream();
+        System.out.println(connection.getContentLength());
+        
+        System.out.println(is);
