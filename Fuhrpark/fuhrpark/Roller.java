@@ -5,7 +5,8 @@ public class Roller extends Fahrzeug {
     private int zuladungInKG;
     private int anzahlRoller = 0;
 
-    public Roller(){
+    public Roller(String fahrzeugkennung){
+        super(fahrzeugkennung);
         anzahlRoller++;
     }
     public int getAnzahlRoller() {

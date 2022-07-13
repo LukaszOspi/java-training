@@ -8,8 +8,13 @@ public class Fahrzeug {
     private double kaufPreis;
     private boolean verfuegbar;
     private int anzahlFahrzeuge = 0;
-
+    
     public Fahrzeug() {
+        anzahlFahrzeuge++;
+    }
+
+    public Fahrzeug(String fahrzeugkennung) {
+        this.fahrzeugkennung = fahrzeugkennung;
         anzahlFahrzeuge++;
     }
     public int getAnzahlFahrzeuge() {

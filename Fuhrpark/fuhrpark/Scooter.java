@@ -4,8 +4,13 @@ public class Scooter extends Roller {
     private int gewicht;
     private boolean klappbar;
 
-    public Scooter() {
+    public Scooter(String fahrzeugkennung) {
+        super(fahrzeugkennung);
         anzahlScooter++;
+    }
+    public Scooter(String fahrzeugkennung, int gewicht){
+        super(fahrzeugkennung);
+        this.gewicht = gewicht;
     }
 
     public int getAnzahlScooter() {

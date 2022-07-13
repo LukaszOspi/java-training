@@ -5,10 +5,11 @@ public class PKW extends Fahrzeug {
     
     private String kfzKennzeichen;
     private int anzahlTueren;
-    public int anzahlMaxInsassen;
+    private int anzahlMaxInsassen;
     private int anzahlPKW = 0;
 
-    public PKW() {
+    public PKW(String fahrzeugkennung) {
+        super(fahrzeugkennung);
         anzahlPKW++;
     }
     PKW(int anzahlMaxInsassen){
@@ -18,7 +19,12 @@ public class PKW extends Fahrzeug {
         this.anzahlMaxInsassen = anzahlMaxInsassen;
         this.anzahlTueren = anzahlTueren;
     }
-    
+    PKW(int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen) {
+        this.anzahlMaxInsassen = anzahlMaxInsassen;
+        this.anzahlTueren = anzahlTueren;
+        this.kfzKennzeichen = kfzKennzeichen;
+    }
+
     public int getAnzahlPKW() {
         return anzahlPKW;
     }

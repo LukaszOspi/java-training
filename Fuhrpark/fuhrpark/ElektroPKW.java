@@ -6,15 +6,20 @@ public class ElektroPKW extends PKW {
     private int akkuKapazitaet;
     private int ladestand;
 
-    ElektroPKW()   {
+    ElektroPKW(String fahrzeugkennung)   {
+        super(fahrzeugkennung);
         anzahlElektroPKW++;
-    }
-    ElektroPKW(int akkuKapazitaet) {
-        this.akkuKapazitaet = akkuKapazitaet;
+    // }
+    // ElektroPKW(int akkuKapazitaet) {
+    //     this.akkuKapazitaet = akkuKapazitaet;
         
-    }
+    // }
     ElektroPKW(int anzahlMaxInsassen, int ladestand) {
         super(anzahlMaxInsassen);
+        this.ladestand = ladestand;
+    }
+    ElektroPKW(int anzahlMaxInsassen, int anzahlTueren, int ladestand) {
+        super(anzahlMaxInsassen, anzahlTueren);
         this.ladestand = ladestand;
     }
     public int getAnzahlElektroPKW() {
