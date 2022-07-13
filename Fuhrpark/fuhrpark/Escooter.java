@@ -6,6 +6,10 @@ public class Escooter extends Roller{
     private String kfzKennzeichen;
     private int akkuKapazitaet;
 
+    public Escooter() {
+        anzahlEscooter++;
+    }
+
     public int getAnzahlEscooter() {
         return anzahlEscooter;
     }

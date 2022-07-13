@@ -7,7 +7,14 @@ public class Fahrzeug {
     private String fahrzeugkennung;
     private double kaufPreis;
     private boolean verfuegbar;
+    private int anzahlFahrzeuge = 0;
 
+    public Fahrzeug() {
+        anzahlFahrzeuge++;
+    }
+    public int getAnzahlFahrzeuge() {
+        return anzahlFahrzeuge;
+    }
     public Date getKaufDatum() {
         return kaufDatum;
     }

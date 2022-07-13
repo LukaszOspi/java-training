@@ -1,8 +1,12 @@
 package fuhrpark;
 public class Scooter extends Roller {
-    private int anzahlScooter;
+    private int anzahlScooter = 0;
     private int gewicht;
     private boolean klappbar;
+
+    public Scooter() {
+        anzahlScooter++;
+    }
 
     public int getAnzahlScooter() {
         return anzahlScooter;
