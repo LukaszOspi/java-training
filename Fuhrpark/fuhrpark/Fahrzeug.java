@@ -1,22 +1,24 @@
 package fuhrpark;
 import java.util.Date;
 
+// This is a superior class for all kind of vehicles!!
+
 public class Fahrzeug {
     
     private Date kaufDatum;
     private String fahrzeugkennung;
     private double kaufPreis;
     private boolean verfuegbar;
-    private int anzahlFahrzeuge = 0;
+    static int anzahlFahrzeuge = 0;
     
-    public Fahrzeug() {
-        anzahlFahrzeuge++;
-    }
-
+  
+// 1 Konstruktor
     public Fahrzeug(String fahrzeugkennung) {
         this.fahrzeugkennung = fahrzeugkennung;
         anzahlFahrzeuge++;
     }
+
+// Getter
     public int getAnzahlFahrzeuge() {
         return anzahlFahrzeuge;
     }
@@ -32,6 +34,8 @@ public class Fahrzeug {
     public boolean getVerfuegbar() {
         return verfuegbar;
     }
+
+    // Setter
     public void setKaufDatum(Date kaufDatum) {
         this.kaufDatum = kaufDatum;
     }

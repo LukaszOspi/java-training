@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\test-java"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar",
+			"c:\\Users\\ospi\\Downloads\\json-simple-1.1.jar"
+		]
+	}
+}

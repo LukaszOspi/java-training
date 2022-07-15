@@ -1,16 +1,18 @@
 package fuhrpark;
 public class Escooter extends Roller{
     
-    private int anzahlEscooter;
+    static int anzahlEscooter = 0;
     private String accuType;
     private String kfzKennzeichen;
     private int akkuKapazitaet;
 
+// 1 Konstruktor
     public Escooter(String fahrzeugkennung) {
         super(fahrzeugkennung);
         anzahlEscooter++;
     }
 
+// Getter
     public int getAnzahlEscooter() {
         return anzahlEscooter;
     }
@@ -23,6 +25,8 @@ public class Escooter extends Roller{
     public int getAkkuKapazitaet() {
         return akkuKapazitaet;
     }
+
+// Setter
     public void setAnzahlEscooter(int anzahlEscooter) {
         this.anzahlEscooter = anzahlEscooter;
     }

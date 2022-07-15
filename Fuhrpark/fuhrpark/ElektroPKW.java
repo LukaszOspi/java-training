@@ -2,26 +2,27 @@ package fuhrpark;
 
 public class ElektroPKW extends PKW {
 
-    private int anzahlElektroPKW = 0;
+    static int anzahlElektroPKW = 0;
     private int akkuKapazitaet;
     private int ladestand;
-
+    
+// 3 Konstruktoren
     ElektroPKW(String fahrzeugkennung)   {
         super(fahrzeugkennung);
+        anzahlElektroPKW++; }
+   
+    ElektroPKW(String fahrzeugkennung, int anzahlMaxInsassen, int ladestand) {
+        super(fahrzeugkennung, anzahlMaxInsassen);
+        this.ladestand = ladestand;
         anzahlElektroPKW++;
-    // }
-    // ElektroPKW(int akkuKapazitaet) {
-    //     this.akkuKapazitaet = akkuKapazitaet;
-        
-    // }
-    ElektroPKW(int anzahlMaxInsassen, int ladestand) {
-        super(anzahlMaxInsassen);
-        this.ladestand = ladestand;
     }
-    ElektroPKW(int anzahlMaxInsassen, int anzahlTueren, int ladestand) {
-        super(anzahlMaxInsassen, anzahlTueren);
+    ElektroPKW(String fahrzeugkennung, int anzahlMaxInsassen, int ladestand, int anzahlTueren) {
+        super(fahrzeugkennung, anzahlMaxInsassen, anzahlTueren);
         this.ladestand = ladestand;
+        anzahlElektroPKW++;
     }
+
+    // Getter
     public int getAnzahlElektroPKW() {
         return anzahlElektroPKW;
     }
@@ -31,6 +32,7 @@ public class ElektroPKW extends PKW {
     public int getLadestand() {
         return ladestand;
     }
+    // Setter
     public void setAkkuKapazitaet(int akkuKapazitaet) {
         this.akkuKapazitaet = akkuKapazitaet;
     }

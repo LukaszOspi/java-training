@@ -1,9 +1,11 @@
 package fuhrpark;
+
 public class Scooter extends Roller {
-    private int anzahlScooter = 0;
+    static int anzahlScooter = 0;
     private int gewicht;
     private boolean klappbar;
 
+// 2 Konstruktoren
     public Scooter(String fahrzeugkennung) {
         super(fahrzeugkennung);
         anzahlScooter++;
@@ -11,8 +13,10 @@ public class Scooter extends Roller {
     public Scooter(String fahrzeugkennung, int gewicht){
         super(fahrzeugkennung);
         this.gewicht = gewicht;
+        anzahlScooter++;
     }
 
+// Getter
     public int getAnzahlScooter() {
         return anzahlScooter;
     }
@@ -22,6 +26,8 @@ public class Scooter extends Roller {
     public boolean getKlappbar() {
         return klappbar;
     }
+
+// Setter
     public void setAnzahlScooter(int anzahlScooter) {
         this.anzahlScooter = anzahlScooter;
     }

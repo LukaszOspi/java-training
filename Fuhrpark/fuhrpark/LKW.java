@@ -1,10 +1,20 @@
 package fuhrpark;
+
 public class LKW extends Fahrzeug {
     private String kfzKennzeichen;
     private double zulaessigesGesamtgewicht;
     private double ladeVolume;
     private boolean gefahrengut;
     private boolean kuehlung;
+    static int anzahlLKW = 0;
+
+// 1 Konstruktor
+    public LKW(String fahrzeugkennung) {
+        super(fahrzeugkennung);
+        anzahlLKW++;
+    }
+
+// Getter
     public String getKfzKennzeichen() {
         return kfzKennzeichen;
     }
@@ -20,6 +30,8 @@ public class LKW extends Fahrzeug {
     public double getLadeVolume() {
         return ladeVolume;
     }
+
+// Setter
     public void setLadeVolume(double ladeVolume) {
         this.ladeVolume = ladeVolume;
     }

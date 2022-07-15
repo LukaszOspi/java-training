@@ -1,30 +1,39 @@
 package fuhrpark;
 
+// This is a superior class for VerbrennerPKW and ElektroPKW !!
 
 public class PKW extends Fahrzeug {
     
     private String kfzKennzeichen;
     private int anzahlTueren;
     private int anzahlMaxInsassen;
-    private int anzahlPKW = 0;
+    static int anzahlPKW = 0;
 
+// 4 Konstruktoren
     public PKW(String fahrzeugkennung) {
         super(fahrzeugkennung);
         anzahlPKW++;
     }
-    PKW(int anzahlMaxInsassen){
+    PKW(String fahrzeugkennung, int anzahlMaxInsassen){
+        super(fahrzeugkennung);
         this.anzahlMaxInsassen = anzahlMaxInsassen;
+        anzahlPKW++;
     }
-    PKW(int anzahlMaxInsassen, int anzahlTueren) {
+    PKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren) {
+        super(fahrzeugkennung);
         this.anzahlMaxInsassen = anzahlMaxInsassen;
         this.anzahlTueren = anzahlTueren;
+        anzahlPKW++;
     }
-    PKW(int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen) {
+    PKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen) {
+        super(fahrzeugkennung);
         this.anzahlMaxInsassen = anzahlMaxInsassen;
         this.anzahlTueren = anzahlTueren;
         this.kfzKennzeichen = kfzKennzeichen;
+        anzahlPKW++;
     }
 
+// Getter
     public int getAnzahlPKW() {
         return anzahlPKW;
     }
@@ -37,6 +46,9 @@ public class PKW extends Fahrzeug {
     public String getKfzKennzeichen() {
         return kfzKennzeichen;
     }
+
+
+// Setter
     public void setAnzahlTueren(int anzahlTueren) {
         this.anzahlTueren = anzahlTueren;
     }
@@ -46,5 +58,5 @@ public class PKW extends Fahrzeug {
     public void setKfzKennzeichen(String kfzKennzeichen) {
         this.kfzKennzeichen = kfzKennzeichen;
     }
-
+    
 }
