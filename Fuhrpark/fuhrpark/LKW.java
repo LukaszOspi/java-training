@@ -18,20 +18,22 @@ public class LKW extends Fahrzeug {
     public String getKfzKennzeichen() {
         return kfzKennzeichen;
     }
-    public void setKfzKennzeichen(String kfzKennzeichen) {
-        this.kfzKennzeichen = kfzKennzeichen;
-    }
+  
     public double getZulaessigesGesamtgewicht() {
         return zulaessigesGesamtgewicht;
     }
-    public void setZulaessigesGesamtgewicht(double zulaessigesGesamtgewicht) {
-        this.zulaessigesGesamtgewicht = zulaessigesGesamtgewicht;
-    }
+
     public double getLadeVolume() {
         return ladeVolume;
     }
 
 // Setter
+    public void setKfzKennzeichen(String kfzKennzeichen) {
+        this.kfzKennzeichen = kfzKennzeichen;
+    }
+    public void setZulaessigesGesamtgewicht(double zulaessigesGesamtgewicht) {
+        this.zulaessigesGesamtgewicht = zulaessigesGesamtgewicht;
+    }
     public void setLadeVolume(double ladeVolume) {
         this.ladeVolume = ladeVolume;
     }

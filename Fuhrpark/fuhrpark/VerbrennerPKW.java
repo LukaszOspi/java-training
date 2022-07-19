@@ -3,7 +3,7 @@ package fuhrpark;
 public class VerbrennerPKW extends PKW {
     static Integer anzahlVerbrennerPKW = 0;
     private String treibstoff;
-    private String fuellstand;
+    private int fuellstand;
     private int tankgroesse = 50;
     
     
@@ -13,12 +13,12 @@ public class VerbrennerPKW extends PKW {
         super(fahrzeugkennung);
         anzahlVerbrennerPKW++;
     }
-    VerbrennerPKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen, String fuellstand) {
+    VerbrennerPKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen, int fuellstand) {
         super(fahrzeugkennung, anzahlMaxInsassen, anzahlTueren, kfzKennzeichen);
         this.fuellstand = fuellstand;
         anzahlVerbrennerPKW++;
     }
-    VerbrennerPKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen, String fuellstand, int tankgroesse) {
+    VerbrennerPKW(String fahrzeugkennung, int anzahlMaxInsassen, int anzahlTueren, String kfzKennzeichen, int fuellstand, int tankgroesse) {
         super(fahrzeugkennung, anzahlMaxInsassen, anzahlTueren, kfzKennzeichen);
         this.fuellstand = fuellstand;
         this.tankgroesse = tankgroesse;
@@ -44,10 +44,16 @@ public class VerbrennerPKW extends PKW {
     public void setTreibstoff(String treibstoff) {
         this.treibstoff = treibstoff;
     }
-    public String getFuellstand() {
+    public int getFuellstand() {
         return fuellstand;
     }
-    public void setFuellstand(String fuellstand) {
+    public void setFuellstand(int fuellstand) {
+        if(fuellstand >= 0 && fuellstand <= tankgroesse){
+            this.fuellstand = fuellstand;
+        }
+        else{
+            System.out.println("Der Fuellstand muss zwischen 0 und " + tankgroesse + " liegen!");
+        }
         this.fuellstand = fuellstand;
     }
     public void setTankgroesse(int tankgroesse) {

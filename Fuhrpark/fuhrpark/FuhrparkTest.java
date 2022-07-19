@@ -10,9 +10,10 @@ public class FuhrparkTest {
 
         // 2 Konstruktoren VerbrennerPKW
         VerbrennerPKW verbrenner1 = new VerbrennerPKW("Kennung 0006");
-        VerbrennerPKW verbrenner2 = new VerbrennerPKW("Kennung 0007", 5, 5, "BI200500", "8/8" );
+        VerbrennerPKW verbrenner2 = new VerbrennerPKW("Kennung 0007", 5, 5, "BI200500", 100 );
+        
         //Verbrenner 3 mit anderer Tankgroesse
-        VerbrennerPKW verbrenner3 = new VerbrennerPKW("Kennung 0010", 4, 4, "BI70040", "6/8", 44);
+        VerbrennerPKW verbrenner3 = new VerbrennerPKW("Kennung 0010", 4, 4, "BI70040", 80, 44);
         // 1 Konstruktor LKW
        LKW lkw1 = new LKW("Kennung 0005");
 

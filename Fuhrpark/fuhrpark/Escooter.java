@@ -27,9 +27,7 @@ public class Escooter extends Roller{
     }
 
 // Setter
-    public void setAnzahlEscooter(int anzahlEscooter) {
-        this.anzahlEscooter = anzahlEscooter;
-    }
+ 
     public void setAccuType(String accuType) {
         this.accuType = accuType;
     }
@@ -37,7 +35,14 @@ public class Escooter extends Roller{
         this.kfzKennzeichen = kfzKennzeichen;
     }
     public void setAkkuKapazitaet(int akkuKapazitaet) {
-        this.akkuKapazitaet = akkuKapazitaet;
+        if (akkuKapazitaet >=0 && akkuKapazitaet <= 100){
+            this.akkuKapazitaet = akkuKapazitaet;
+        }
+        else {
+            akkuKapazitaet = 0;
+            System.out.println("Die Akkukapazitaet muss zwischen 0 und 100 liegen!");
+        }
+      
     }
 
 }

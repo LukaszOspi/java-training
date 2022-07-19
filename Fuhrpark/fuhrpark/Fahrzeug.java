@@ -1,4 +1,6 @@
 package fuhrpark;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // This is a superior class for all kind of vehicles!!
@@ -10,6 +12,7 @@ public class Fahrzeug {
     private double kaufPreis;
     private boolean verfuegbar;
     static int anzahlFahrzeuge = 0;
+    private String kaufDatumString;
     
   
 // 1 Konstruktor
@@ -19,7 +22,7 @@ public class Fahrzeug {
     }
 
 // Getter
-    public int getAnzahlFahrzeuge() {
+    public static int getAnzahlFahrzeuge() {
         return anzahlFahrzeuge;
     }
     public Date getKaufDatum() {
@@ -36,9 +39,18 @@ public class Fahrzeug {
     }
 
     // Setter
-    public void setKaufDatum(Date kaufDatum) {
-        this.kaufDatum = kaufDatum;
+    public void setKaufDatum(String kaufDatumString) throws ParseException {
+        SimpleDateFormat myFormat = new SimpleDateFormat("dd.MM.yyyy");
+        try {
+            Date date = myFormat.parse(kaufDatumString);
+            this.kaufDatum = date;
+        }
+            catch (ParseException e) {
+                e.printStackTrace();
+              }
+    
     }
+
     public void setFahrzeugkennung(String fahrzeugkennung) {
         this.fahrzeugkennung = fahrzeugkennung;
     }
